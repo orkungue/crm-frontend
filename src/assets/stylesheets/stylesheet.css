@@ -1,0 +1,158 @@
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.page_alone{
+  width: auto;
+display: block;
+width: 100%;
+}
+
+
+.group{
+  display: grid;
+  height: 88vh;
+  max-height: 88vh;
+  overflow-y: auto;
+   transition:  1s ease-in-out;
+  grid-template-columns: 1fr, 2fr;
+  grid-template-rows: 100px 60px;
+  grid-template-areas: 'navigation' 'main';
+  grid-row-gap: 1px;
+  grid-column-gap: 10px;
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+@media screen and (max-width: 60em) {
+  .group{
+    margin: 0 auto;
+  }
+  .group .blocktemplate{
+    width: 55%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 40em) {
+
+.group{
+  margin: 0 auto;
+}
+
+  .group .blocktemplate{
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+
+.group .blocktemplate{
+  padding: 1em;
+  box-sizing:border-box;
+  margin: 1px;
+  margin-top: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.4);
+  background-color: #fff;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  /*width: 45%;
+  float: left;*/
+}
+
+#table_app{
+  height: 88vh;
+  max-height: 88vh;
+  overflow-y: auto;
+  border: 2px solid blue;
+}
+
+.blocktemplate_split{
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+.group2{
+}
+
+@media screen and (min-width: 60em) {
+  .column1{
+    width: 40%;
+    grid-area: navigation;
+    float: left;
+
+  }
+
+  .column2{
+    width: 58%;
+    float:right;
+    grid-area: main;
+  }
+
+  .column10{
+    width: 99.8%;
+    float: left;
+  }
+}
+
+.triangle {
+  position: relative;
+  margin-top: -45px;
+  float: right;
+}
+
+.triangle-0 {
+  width: 25px;
+  height: 25px;
+  border-bottom: solid 25px rgb(25,118,210, 0.5);
+  border-right: solid 25px rgb(25,118,210, 0.5);
+  border-left: solid 25px transparent;
+  border-top: solid 20px transparent;
+}
+
+
+/*USED FOR RADIO IMAGE TYPES OR IN LIST MODEL_TYPES*/
+
+.app_list_horizontal{
+  display: flex;
+  align-items: start;
+}
+
+.radio-box{
+
+}
+
+.radio-image {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(16,146,147,0.12);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(16,146,147,0.12);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.12);
+  border-radius: 5px;
+  -webkit-transition-duration: .1s;
+  -moz-transition-duration: .1s;
+  -o-transition-duration: .1s;
+  transition-duration: .1s;
+  cursor: pointer;
+}
+
+.radio-hidden:checked ~ .radio-image {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+.radio-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+.radio-container {
+  margin: 10px;
+}
+.radio-image:hover {
+  transform: scale(1.03);
+}

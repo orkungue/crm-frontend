@@ -1,0 +1,18 @@
+.list-group li{
+  list-style-type: none;
+}
+
+#note_container{
+width: 100%;
+float: left;
+display: block;
+overflow-x: scroll;
+}
+
+.note_elements{
+  float: left;
+  margin-right: 3.33333%;
+  background-color: lightyellow;
+  min-height: 100px;
+  max-height: 100px;
+}
